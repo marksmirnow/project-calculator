@@ -6,6 +6,8 @@ const equalBtn = document.getElementById('equals');
 const clearBtns = document.querySelectorAll('.clear-btn');
 const decimalBtn = document.getElementById('decimal');
 
+let firstOperand;
+let secondOperand;
 
 function addListener(nodeList, callback) {
 
@@ -15,3 +17,13 @@ function addListener(nodeList, callback) {
 		})
 	})
 }
+
+function numberPress(event) {
+
+	let number = event.target.textContent;
+
+	firstOperand = (+firstOperand) ? firstOperand += number : number;  // не уверен насчет читабальности
+	display.value = firstOperand;
+}
+
+addListener(numberBtns, numberPress);
