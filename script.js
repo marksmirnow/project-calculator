@@ -8,6 +8,8 @@ const decimalBtn = document.getElementById('decimal');
 
 let firstOperand;
 let secondOperand;
+let operation;
+let result;
 
 function addListener(nodeList, callback) {
 
