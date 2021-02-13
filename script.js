@@ -29,3 +29,12 @@ function numberPress(event) {
 }
 
 addListener(numberBtns, numberPress);
+
+function opeationPress(event) {
+
+	let operationSymbol = event.target.textContent;
+	operation = operationSymbol;
+	display.value = operation;
+}
+
+addListener(operationBtns, opeationPress);
