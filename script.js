@@ -45,3 +45,25 @@ function opeationPress(event) {
 }
 
 addListener(operationBtns, opeationPress);
+
+
+function calculateResult() {
+
+	switch (operation) {
+		case '+':
+			result = +firstOperand + +secondOperand;
+			break;
+		case '-':
+			result = +firstOperand - +secondOperand;
+			break;
+		case '*':
+			result = +firstOperand * +secondOperand;
+			break;
+		case '/':
+			result = +firstOperand / +secondOperand;
+			break;
+		default:
+			alert('suka');
+			break;
+	}
+}
