@@ -40,8 +40,17 @@ addListener(numberBtns, numberPress);
 function opeationPress(event) {
 
 	let operationSymbol = event.target.textContent;
+
+	if (operation) {
+		calculateResult();
+		firstOperand = result;
+		secondOperand = 0;
+		display.value = result;
+	}
 	operation = operationSymbol;
-	display.value = operation;
+	display.value += operation;
+
+	console.log(firstOperand, operation, secondOperand, result);
 }
 
 addListener(operationBtns, opeationPress);
