@@ -76,3 +76,16 @@ function calculateResult() {
 			break;
 	}
 }
+
+
+equalBtn.addEventListener('click', () => {
+	equalPress();
+})
+
+function equalPress() {
+
+	if (secondOperand) {
+		calculateResult();
+		display.value = result;
+	}
+}
