@@ -24,8 +24,15 @@ function numberPress(event) {
 
 	let number = event.target.textContent;
 
-	firstOperand = (+firstOperand) ? firstOperand += number : number;  // не уверен насчет читабальности
-	display.value = firstOperand;
+	if (operation) {
+		secondOperand = (+secondOperand) ? secondOperand += number : number;
+		display.value = secondOperand;
+	} else {
+		firstOperand = (+firstOperand) ? firstOperand += number : number;  // не уверен насчет читабальности
+		display.value = firstOperand;
+	}
+
+	console.log(firstOperand, secondOperand);
 }
 
 addListener(numberBtns, numberPress);
