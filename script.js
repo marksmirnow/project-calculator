@@ -89,3 +89,21 @@ function equalPress() {
 		display.value = result;
 	}
 }
+
+
+function clearDisplay(event) {
+
+	let clearBtn = event.target.textContent;
+	if (clearBtn === 'ce') {
+		secondOperand = '';
+		display.value = firstOperand;
+	} else {
+		firstOperand = '';
+		secondOperand = '';
+		operation = undefined;
+		result = 0;
+		display.value = result;
+	}
+}
+
+addListener(clearBtns, clearDisplay);
